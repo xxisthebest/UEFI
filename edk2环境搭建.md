@@ -108,3 +108,7 @@ make:
 
 # Windwos --SUCCESS
 按照[[ UEFI开发 ] Linux 环境 ( Ubuntu ) 部署 EDK2 开发环境](https://blog.csdn.net/weixin_44139099/article/details/140681442)的操作进行，基本会成功，注意里边有一个地方不需要cd。
+
+# ECC
+<https://github.com/tianocore/tianocore.github.io/wiki/ECC-tool>
+这个工具可以帮助检测编码的样式问题
