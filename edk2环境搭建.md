@@ -1,18 +1,18 @@
 # MAC
-×îºÃÔÚLinuxÏµÍ³ÖĞ½øĞĞ°²×°£¬ÔÚMacÖĞĞèÒª°²×°Ò»¸öĞéÄâ»ú
+æœ€å¥½åœ¨Linuxç³»ç»Ÿä¸­è¿›è¡Œå®‰è£…ï¼Œåœ¨Macä¸­éœ€è¦å®‰è£…ä¸€ä¸ªè™šæ‹Ÿæœº
 ## VMware Fusion
 ## Ubuntu
-### µçÄÔÔ¶³ÌÁ¬½Ó¿ØÖÆ£ºssh
-ÔÚÏµÍ³ÖĞÊäÈë
+### ç”µè„‘è¿œç¨‹è¿æ¥æ§åˆ¶ï¼šssh
+åœ¨ç³»ç»Ÿä¸­è¾“å…¥
 ```
 ifconfig
 ```
 ![alt text](image.png)
-µÃµ½`ens160->inet`µÄ¶Ë¿ÚºÅ£¬ÔÚmacÖĞ´ò¿ªÖÕ¶Ë£¬ÊäÈë
+å¾—åˆ°`ens160->inet`çš„ç«¯å£å·ï¼Œåœ¨macä¸­æ‰“å¼€ç»ˆç«¯ï¼Œè¾“å…¥
 ```
 ssh wby@172.16.174.128
 ```
-ÃÜÂëÎªUbuntuÖĞÓÃ»§ÃÜÂë£¬½¨Á¢Á¬½Ó
+å¯†ç ä¸ºUbuntuä¸­ç”¨æˆ·å¯†ç ï¼Œå»ºç«‹è¿æ¥
 ```
 (base) nancywang@xxs-book ~ % ssh wby@172.16.174.128
 wby@172.16.174.128's password:
@@ -33,7 +33,7 @@ Welcome to Ubuntu 24.10 (GNU/Linux 6.11.0-8-generic aarch64)
 1 update can be applied immediately.
 To see these additional updates run: apt list --upgradable
 ```
-## ¿ËÂ¡²Ö¿â
+## å…‹éš†ä»“åº“
 ```
 git clone https://github.com/tianocore/edk2.git
 cd edk2
@@ -44,14 +44,14 @@ sudo apt install uuid-dev
 sudo apt install python3
 sudo ln -s /usr/bin/python3 /usr/bin/python
 sudo apt install alien
-sudo wget https://www.nasm.us/pub/nasm/releasebuilds/2.16.03/linux/nasm-2.16.03-0.fc39.x86_64.rpm # ÔÚµ±Ç°Ä¿Â¼ÏÂÏÂÔØnasm
+sudo wget https://www.nasm.us/pub/nasm/releasebuilds/2.16.03/linux/nasm-2.16.03-0.fc39.x86_64.rpm # åœ¨å½“å‰ç›®å½•ä¸‹ä¸‹è½½nasm
 
 source edksetup.sh
-make -C BaseTools //Ö»ĞèÒªÖ´ĞĞÒ»´Î¼´¿É£¬Ê×´Î±àÒë
+make -C BaseTools //åªéœ€è¦æ‰§è¡Œä¸€æ¬¡å³å¯ï¼Œé¦–æ¬¡ç¼–è¯‘
 build -a AARCH64 -t GCC5 -p ArmVirtPkg/ArmVirtQemu.dsc -b DEBUG
-sudo apt install xorg # ÔÚubuntuÉÏ°²×°
+sudo apt install xorg # åœ¨ubuntuä¸Šå®‰è£…
 ```
-³É¹¦ÏÔÊ¾£º
+æˆåŠŸæ˜¾ç¤ºï¼š
 ```
 Fd File Name:QEMU_EFI (/home/wby/edk2/Build/ArmVirtQemu-AARCH64/DEBUG_GCC5/FV/QEMU_EFI.fd)
 
@@ -89,7 +89,7 @@ FVMAIN_COMPACT [55%Full] 2093056 (0x1ff000) total, 1152352 (0x119560) used, 9407
 
 - Done -
 ```
-±àĞ´shÎÄ¼şÓÃÓÚÅäÖÃ»·¾³£º
+ç¼–å†™shæ–‡ä»¶ç”¨äºé…ç½®ç¯å¢ƒï¼š
 ```
 export WORKSPACE=$PWD
 export PACKAGES_PATH=/home/wby/edk2
@@ -97,18 +97,36 @@ export IASL_PREFIX=/home/wby/acpica/generate/unix/bin/
 export PYTHON_COMMAND=/usr/bin/python3
 export GCC5=/usr/bin/gcc
 ```
+## ç£ç›˜æ‰©å®¹
 
-### ÎÊÌâ
-1¡¢
+åœ¨ä½¿ç”¨çš„è¿‡ç¨‹ä¸­ï¼Œç»å¸¸ä¼šå‡ºç°ç£ç›˜æ»¡äº†çš„æƒ…å†µã€‚æ­¤æ—¶éœ€è¦åœ¨VMWareä¸­è¿›è¡Œç£ç›˜æ‰©å®¹ã€‚ä½†æ˜¯ä»…åœ¨è¿™é‡Œæ‰©å¤§ç£ç›˜æ˜¯ä¸å¤Ÿçš„ï¼Œéœ€è¦åœ¨è™šæ‹Ÿæœºä¸­è¿›è¡Œæ‰©å®¹ï¼Œè€Œä¸”å¦‚æœå·²ç»æ»¡ç›˜äº†ï¼Œå¯èƒ½ä¼šåœ¨å¯åŠ¨æ—¶å¡æ­»åœ¨Cloud-initæ­¥éª¤ï¼Œè¿™æ—¶å€™è¦è¿›ç»ˆç«¯è¿›è¡Œæ“ä½œ
+- è™šæ‹Ÿæœºå¯åŠ¨æ—¶è¿›å…¥ç»ˆç«¯æ–¹æ³•ï¼š
+```
+Ctrl+alt+F2
+```
+ç”¨sshè¿œç¨‹è¿æ¥ç”µè„‘ä¹Ÿå¯è¡Œ
+- å…ˆè§£å†³å¯åŠ¨çš„é—®é¢˜
+```
+# æŸ¥çœ‹æ˜¯å¦æœ‰å¯ç”¨ç©ºé—´
+df -h
+sudo vgdisplay
+lsblk
+# é‡æ–°åˆ†é…ç£ç›˜ç©ºé—´
+sudo lvextend -L +20G /dev/mapper/ubuntu--vg-ubuntu--lv
+sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+```
+
+### é—®é¢˜
+1ã€
 ```
 /bin/sh: 1: /home/wby/edk2/acpica/generate/unix/bin/iasl: not found
 make:
 ```
-Ô­Òò£ºiaslµÄÂ·¾¶ÎÊÌâ£¬ĞèÒªÖØĞÂÉèÖÃIASL_PREFIXµÄÂ·¾¶Îª/home/wby/acpica/generate/unix/bin/
+åŸå› ï¼šiaslçš„è·¯å¾„é—®é¢˜ï¼Œéœ€è¦é‡æ–°è®¾ç½®IASL_PREFIXçš„è·¯å¾„ä¸º/home/wby/acpica/generate/unix/bin/
 
 # Windwos --SUCCESS
-°´ÕÕ[[ UEFI¿ª·¢ ] Linux »·¾³ ( Ubuntu ) ²¿Êğ EDK2 ¿ª·¢»·¾³](https://blog.csdn.net/weixin_44139099/article/details/140681442)µÄ²Ù×÷½øĞĞ£¬»ù±¾»á³É¹¦£¬×¢ÒâÀï±ßÓĞÒ»¸öµØ·½²»ĞèÒªcd¡£
+æŒ‰ç…§[[ UEFIå¼€å‘ ] Linux ç¯å¢ƒ ( Ubuntu ) éƒ¨ç½² EDK2 å¼€å‘ç¯å¢ƒ](https://blog.csdn.net/weixin_44139099/article/details/140681442)çš„æ“ä½œè¿›è¡Œï¼ŒåŸºæœ¬ä¼šæˆåŠŸï¼Œæ³¨æ„é‡Œè¾¹æœ‰ä¸€ä¸ªåœ°æ–¹ä¸éœ€è¦cdã€‚
 
 # ECC
 <https://github.com/tianocore/tianocore.github.io/wiki/ECC-tool>
-Õâ¸ö¹¤¾ß¿ÉÒÔ°ïÖú¼ì²â±àÂëµÄÑùÊ½ÎÊÌâ
+è¿™ä¸ªå·¥å…·å¯ä»¥å¸®åŠ©æ£€æµ‹ç¼–ç çš„æ ·å¼é—®é¢˜
